@@ -1,15 +1,16 @@
-#import the pandas Library
-import pandas as pd
+def func(x):
+    if x == 1:
+        return "one"
+    elif x == 2:
+        return "two"
+    elif x == 3:
+        return "three"
+    else: 
+        return "ten"
+num = func(3)
+print(num)
 
-ipl_data = {'Team': ['Riders', 'Riders', 'Devils', 'Devils', 'Kings','kings', 'Kings', 'Kings', 'Riders', 'Royals', 'Royals', 'Rider'], 
-    'Rank': [1, 2, 2, 3, 3,4 ,1 ,1,2, 4,1,2],
-    'Year': [2014,2015,2014,2015,2014,2015,2016,2017,2016,2014,2015,2017],
-    'Points':[876,789,863,673,741,812,756,788,694, 701, 804, 690]} 
-df = pd.DataFrame(ipl_data) 
-
-grouped = df.groupby('Year')
-
-for name,group in grouped:
-    
-    print(name)
-    print(group)
+# Python program showing use 
+# of lambda function 
+num = (lambda x: "one" if x == 1 else("two" if x == 2 else ("three" if x == 3 else "ten")))(3)
+print(num)
